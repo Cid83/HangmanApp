@@ -1,0 +1,128 @@
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #3a444e;
+    color: #fff;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+.container{
+    padding: 20px 20px;
+    height: 450px;
+    width: 450px;
+    position: relative;
+}
+
+h1{
+    font-family: 'Rubik Wet Paint', cursive;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 40px;
+}
+
+p{
+    font-family: 'Sedgwick Ave Display', cursive;
+    letter-spacing: 2px;
+    font-size: 20px;
+}
+
+.graphic{
+    fill: transparent;
+    stroke: #fff;
+    stroke-width: 4px;
+}
+
+.item{
+    display: none;
+}
+
+#wrong-letters{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    font-family: 'Sedgwick Ave Display', cursive;
+    letter-spacing: 2px;
+    font-weight: 200; 
+    color:aquamarine;
+}
+
+#popup-container{
+    background-color: rgba(0,0,0,0.3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* display: flex; */
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup{
+    background-color: aqua;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    color:#3a444e ;
+    box-shadow: 0 15px 10px 3px rgba(0,0,0,0.1);
+  
+}
+
+#play-again{
+    background-color: rgb(163, 224, 204);
+    border-radius: 5px;
+    box-shadow: 0 2px 0 2px #3a444e ;
+    cursor: pointer;
+}
+
+#wrong-letters span{
+    font-size: 20px;
+}
+
+
+
+#word{
+   display: flex;
+   position: absolute;
+   bottom: 10px;
+   left: 50%;
+   transform: translateX(-50%);
+
+}
+
+.letter{
+    border-bottom: 3px solid aquamarine;
+    font-size: 30px;
+    margin: 0px 5px;
+    height: 30px;
+    width:25px;
+    font-family: 'Sedgwick Ave Display', cursive;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#message{
+    background-color: transparent;
+    font-size:20px;
+    border-radius: 5px;
+    padding: 10px 80px;
+    position: absolute;
+    bottom: -80px;
+    transition: transform 0.4s ease-in-out;
+}
+
+#message.show {
+    transform: translateY(-80px);
+}
+
